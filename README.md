@@ -1,5 +1,5 @@
 # smb-panda
-################-find thousands of smb blue targets in just 15 minutes-##################
+################-find thousands of vulnerable eternalblue targets in just 15 minutes-##################
 
         	      ___.    
 	  ______ _____\_ |__  
