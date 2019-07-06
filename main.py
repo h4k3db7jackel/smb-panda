@@ -16,12 +16,14 @@ print('..........................................$$.|...........................
 print('..........................................$$.|..............................................')
 print('..........................................\__|..............................................')
 
+print(' (IM NOT FUCKING RESPONSEABLE FOR YOUR RETARTED DECISIONS)')
+
 #ip = ".".join(map(str, (random.randint(0, 255) 
  #                       for _ in range(4))))
 
 print("")
 
-ip = raw_input("WHAT IS THE SCAN RANGE (example 196.168.0.0/12):  ")
+ip = raw_input("RANGE (example 74.35.0.0/12):  ")
 type(ip)
 
 os.system('masscan -p445,445 ' + ip +' --rate=10000 > out.txt' )
@@ -43,6 +45,9 @@ print('..........................................$$.|...........................
 print('..........................................\__|..............................................')
 
 
+print('IT TAKES A COUPLE FUCKING SECONDS TO DO ITS THING SO DONT BE IMPATIENT !!!')
+
+
 os.system('chmod 777 scan2.sh')
 
-os.system('bash scan2.sh')
+os.system('bash scan2.sh | grep likely')
