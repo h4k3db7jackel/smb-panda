@@ -65,3 +65,7 @@ then it saves the output as a .sh file
 then it runs the .sh file whitch will scan those ip addresses to se if it has a vulnerable version of smb
 
 then it will tell you what is fulnerable and what has a safe version of smb
+
+
+
+(if you dont like somthing or find a bug. edit it your godam self or delete it)
